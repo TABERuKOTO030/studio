@@ -1,5 +1,5 @@
-const V='veil-v1';
-const ASSETS=['./','index.html','styles.css','config.js','i18n.js','app.js','vendor/supabase.js','fonts/fraktur.woff2','fonts/pinyon.woff2','fonts/corm.woff2','fonts/corm-i.woff2','manifest.json','icons/icon-192.png','icons/icon-512.png','icons/badge.png'];
+const V='veil-v2';
+const ASSETS=['./','index.html','styles.css','config.js','i18n.js','app.js','vendor/supabase.js','fonts/fraktur.woff2','fonts/pinyon.woff2','fonts/corm.woff2','fonts/corm-i.woff2','fonts/fredoka.woff2','fonts/quick.woff2','manifest.json','icons/icon-192.png','icons/icon-512.png','icons/badge.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;

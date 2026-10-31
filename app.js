@@ -27,12 +27,15 @@ document.body.insertAdjacentHTML('afterbegin',`<svg width="0" height="0" style="
 <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
 <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 <symbol id="i-rep" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 12-5l2 2M19 12a7 7 0 0 1-12 5l-2-2M19 4v5h-5M5 20v-5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+<symbol id="palm" viewBox="0 0 64 64"><path d="M33 62c1-14 0-26-3-36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M30 26C22 14 10 14 4 20c9-2 16 0 26 6zM30 26c-2-12 4-22 14-24-6 6-9 14-14 24zM30 26c10-8 22-8 28 0-10-3-18-2-28 0zM30 26c-12 0-20 8-22 18 6-8 12-13 22-18zM30 26c10 2 18 10 18 20-5-8-10-14-18-20z" fill="currentColor"/></symbol>
+<symbol id="flags" viewBox="0 0 200 30"><path d="M0 4Q100 16 200 4" stroke="#9BCFD0" stroke-width="1.2" fill="none"/><path d="M8 5l8 18 8-17z" fill="#7FD3CF"/><path d="M38 8l7 18 9-17z" fill="#FFE07A"/><path d="M70 10l7 17 8-16z" fill="#FFB8C9"/><path d="M103 10l7 17 8-17z" fill="#7FD3CF"/><path d="M135 9l8 17 7-17z" fill="#FFE07A"/><path d="M166 7l8 18 8-18z" fill="#FFB8C9"/></symbol>
+<symbol id="charm" viewBox="0 0 40 70"><path d="M20 0v30" stroke="#AEB6C1" stroke-width="2" stroke-dasharray="3 2"/><path d="M20 66C9 58 4 52 4 45c0-5 4-9 9-9 3 0 6 2 7 5 1-3 4-5 7-5 5 0 9 4 9 9 0 7-5 13-16 21z" fill="#DCE9F6"/><path d="M20 60c-7-5-10-9-10-14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/></symbol>
 <symbol id="star" viewBox="0 0 24 24"><path d="M12 0C12.6 8 16 11.4 24 12C16 12.6 12.6 16 12 24C11.4 16 8 12.6 0 12C8 11.4 11.4 8 12 0Z" fill="currentColor"/></symbol>
 <symbol id="heart" viewBox="0 0 24 22"><path d="M12 21C4 15 0 11 0 6.5 0 3 2.7 0 6.2 0 8.6 0 10.8 1.3 12 3.4 13.2 1.3 15.4 0 17.8 0 21.3 0 24 3 24 6.5 24 11 20 15 12 21Z" fill="currentColor"/></symbol>
 <symbol id="bow" viewBox="0 0 60 40"><path d="M30 16C22 4 6-2 4 8s6 18 26 10c-4 6-10 16-14 22l6 0 8-16 8 16 6 0c-4-6-10-16-14-22 20 8 28 0 26-10S38 4 30 16Z" fill="currentColor"/><circle cx="30" cy="17" r="4" fill="currentColor"/></symbol>
 <symbol id="thorn" viewBox="0 0 240 40"><path d="M4 22C40 6 80 34 120 20S200 6 236 20" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M30 17l-6-10M54 22l4-11M82 26l-8-9M108 21l6-11M134 18l-5-11M160 14l7-9M188 15l-4 11M214 18l8-8M44 20l-10 3M96 24l-11 4M150 16l-10-5M200 15l9 5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><path d="M120 20c-6-12 4-18 0-20 9 6 6 14 0 20z" fill="currentColor" opacity=".85"/></symbol>
 </defs></svg>`);
-const deco=k=>S.theme==='noir'?{star:`<svg class="dk-star ${k||''}"><use href="#star"/></svg>`,orn:`<svg class="dk-thorn" viewBox="0 0 240 40"><use href="#thorn"/></svg>`}[k==='orn'?'orn':'star']
+const deco=k=>S.theme==='soda'?(k==='orn'?`<svg class="dk-flags" viewBox="0 0 200 30"><use href="#flags"/></svg>`:`<svg class="dk-palm ${k||''}" viewBox="0 0 64 64"><use href="#palm"/></svg>`):S.theme==='diary'?(k==='orn'?`<i class="dk-tape"></i>`:`<svg class="dk-heart ${k||''}" viewBox="0 0 24 22"><use href="#heart"/></svg>`):S.theme==='noir'?{star:`<svg class="dk-star ${k||''}"><use href="#star"/></svg>`,orn:`<svg class="dk-thorn" viewBox="0 0 240 40"><use href="#thorn"/></svg>`}[k==='orn'?'orn':'star']
   :{star:`<svg class="dk-heart ${k||''}" viewBox="0 0 24 22"><use href="#heart"/></svg>`,orn:`<svg class="dk-bow" viewBox="0 0 60 40"><use href="#bow"/></svg>`}[k==='orn'?'orn':'star'];
 // ---------- 数据层 ----------
 const TB={items:'ops_items',posts:'ops_posts',stats:'ops_stats',ideas:'ops_ideas',contacts:'ops_contacts',expenses:'ops_expenses',mf:'ops_mf_snap',xs:'ops_x_snap',xp:'ops_x_posts'};
@@ -48,8 +51,10 @@ async function save(k,row){const t=TB[k];const isNew=!row.id;let q;const r={...r
 async function del(k,id){const {error}=await sb.from(TB[k]).delete().eq('id',id);if(error){toast(error.message,1);throw error}S[k]=S[k].filter(x=>x.id!==id)}
 
 // ---------- 主题 / 语言 ----------
-function applyTheme(){document.documentElement.className='t-'+S.theme;const m=$('meta[name=theme-color]');if(m)m.content=S.theme==='noir'?'#0B0A0D':'#CFD9E3'}
-const brand=(sub)=>S.theme==='noir'?`<header class="brand b-noir">${deco('s1')}${deco('s2')}${deco('s3')}<div class="wm">Veil</div>${deco('orn')}<p class="bt">${T('秘幕手帐')}</p>${sub?`<p class="bs">${esc(sub)}</p>`:''}</header>`
+function applyTheme(){document.documentElement.className='t-'+S.theme;const m=$('meta[name=theme-color]');if(m)m.content={noir:'#0B0A0D',mist:'#CFD9E3',soda:'#E8F7F5',diary:'#F3F4F6'}[S.theme]||'#0B0A0D'}
+const brand=(sub)=>S.theme==='soda'?`<header class="brand b-soda">${deco('orn')}<p class="cap">VOL.1 ｜ SCHEDULE & RECORD</p><div class="wm">Veil</div><p class="bt"><span>${T('秘幕手帐')}</span></p>${deco('p1')}${sub?`<p class="bs">${esc(sub)}</p>`:''}</header>`
+ :S.theme==='diary'?`<header class="brand b-diary"><svg class="dk-charm" viewBox="0 0 40 70"><use href="#charm"/></svg><i class="dk-tape t1"></i><div class="wm">Veil</div><p class="cap">mini · diary · schedule</p><p class="bt">${T('秘幕手帐')}</p>${sub?`<p class="bs">${esc(sub)}</p>`:''}</header>`
+ :S.theme==='noir'?`<header class="brand b-noir">${deco('s1')}${deco('s2')}${deco('s3')}<div class="wm">Veil</div>${deco('orn')}<p class="bt">${T('秘幕手帐')}</p>${sub?`<p class="bs">${esc(sub)}</p>`:''}</header>`
   :`<header class="brand b-mist"><div class="bows">${deco('orn')}<div class="wm">Veil</div>${deco('orn')}</div><p class="bt">${T('秘幕手帐')}</p><p class="cap">Display only ｜ スケジュールと記録</p>${sub?`<p class="bs">${esc(sub)}</p>`:''}</header>`;
 
 // ---------- 登录 ----------
@@ -62,7 +67,7 @@ function authView(mode='in'){$('#app').innerHTML=`<div class="auth">${themeSw()}
   $('#af').onsubmit=async e=>{e.preventDefault();const f=new FormData(e.target);const email=f.get('email').trim(),password=f.get('pw');
     const r=mode==='in'?await sb.auth.signInWithPassword({email,password}):await sb.auth.signUp({email,password});
     if(r.error)return toast(r.error.message,1);if(!r.data.session)return toast(T('请查收确认邮件后登录'));boot()}}
-const themeSw=()=>`<div class="tsw">${[['noir',T('绯夜')],['mist',T('雾蓝')]].map(([k,n])=>`<button data-th="${k}" class="${S.theme===k?'on':''}"><i class="sw sw-${k}"></i>${n}</button>`).join('')}<button data-lang class="lang">${LANG==='ja'?'中文':'日本語'}</button></div>`;
+const themeSw=()=>`<div class="tsw">${[['noir',T('绯夜')],['mist',T('雾蓝')],['soda',T('果汁夏日')],['diary',T('棉云日记')]].map(([k,n])=>`<button data-th="${k}" class="${S.theme===k?'on':''}"><i class="sw sw-${k}"></i>${n}</button>`).join('')}<button data-lang class="lang">${LANG==='ja'?'中文':'日本語'}</button></div>`;
 function bindThemeSw(){$$('[data-th]').forEach(b=>b.onclick=()=>{S.theme=b.dataset.th;localStorage.setItem('veil-theme',S.theme);applyTheme();S.user?render():authView()});
   $$('[data-lang]').forEach(b=>b.onclick=()=>{setLang(LANG==='ja'?'zh':'ja');S.user?render():authView()})}
 
@@ -188,7 +193,7 @@ function metrics(p){const st=statsOf(p.id);const l=st[st.length-1]||{};const sal
   return{st,l,sales,views:num(l.views),likes:num(l.likes),rev,gross,cost,exp,profit,roi:cost>0?profit/cost:NaN,conv:num(l.views)?sales/num(l.views):NaN}}
 const stBadge=s=>`<i class="st st-${STATUSES.indexOf(s)}">${esc(T(s))}</i>`;
 function postsView(){const f=S.postFilter;const ps=S.posts.filter(p=>f==='全部'||p.status===f).sort((a,b)=>(b.sale_date||'9').localeCompare(a.sale_date||'9'));
-  return`${S.theme==='mist'?`<div class="pagehd"><span class="cap">〈 ポスト 〉</span><h2 class="script">Posts</h2><p class="sp">${T('投稿记录')}</p></div>`:`<div class="pagehd"><h2 class="bl">Posts</h2>${deco('orn')}<p class="sp">${T('投稿记录')}</p></div>`}
+  return`${S.theme!=='noir'?`<div class="pagehd"><span class="cap">〈 ポスト 〉</span><h2 class="script">Posts</h2><p class="sp">${T('投稿记录')}</p></div>`:`<div class="pagehd"><h2 class="bl">Posts</h2>${deco('orn')}<p class="sp">${T('投稿记录')}</p></div>`}
   <div class="filters">${['全部',...STATUSES].map(s=>`<button data-pf="${s}" class="${f===s?'on':''}">${T(s)} <i>${s==='全部'?S.posts.length:S.posts.filter(p=>p.status===s).length}</i></button>`).join('')}</div>
   <div class="plist">${ps.map(p=>{const m=metrics(p);return`<button class="pcard card" data-p="${p.id}">${p.cover?`<img class="cov" src="${esc(p.cover)}" alt="">`:`<div class="cov ph">${deco('s')}</div>`}
    <div class="pc-b"><div class="pc-t"><b>${esc(p.title||T('（无标题）'))}</b>${stBadge(p.status)}</div><small>${esc(p.platform||'')} · ${p.sale_date?T('开售 ')+p.sale_date:T('未定档')}${p.theme?' · '+esc(p.theme):''}</small>
@@ -258,7 +263,7 @@ const xHandle=()=>String(S.set.x_handle||'').replace(/^@/,'');
 const xSnaps=()=>S.xs.filter(s=>s.handle.toLowerCase()===xHandle().toLowerCase()).sort((a,b)=>a.day.localeCompare(b.day));
 const er=x=>x.views?(x.likes+x.reposts+x.replies+x.quotes+x.bookmarks)/x.views:NaN;
 function groupSum(key){const g={};S.posts.forEach(p=>{const ks=key(p);const m=metrics(p);ks.forEach(k=>{g[k]=g[k]||{rev:0,n:0,sales:0};g[k].rev+=m.rev;g[k].n++;g[k].sales+=m.sales})});return Object.entries(g).sort((a,b)=>b[1].rev-a[1].rev)}
-function dataView(){const sub=S.sub;return`<div class="pagehd">${S.theme==='mist'?`<span class="cap">〈 データ 〉</span><h2 class="script">Insight</h2>`:`<h2 class="bl">Insight</h2>${deco('orn')}`}<p class="sp">${T('数据分析')}</p></div>
+function dataView(){const sub=S.sub;return`<div class="pagehd">${S.theme!=='noir'?`<span class="cap">〈 データ 〉</span><h2 class="script">Insight</h2>`:`<h2 class="bl">Insight</h2>${deco('orn')}`}<p class="sp">${T('数据分析')}</p></div>
   <div class="seg mini">${[['dash','总览'],['x','X 账号'],['mf','myfans']].map(([k,n])=>`<button data-sub="${k}" class="${sub===k?'on':''}">${T(n)}</button>`).join('')}</div>${({dash:dashView,x:xView,mf:mfView})[sub]()}`}
 function dashView(){const ym=today().slice(0,7);const f=monthFin(ym);const k=S.set.kpi||{};const xs=xSnaps();const fol=xs.length?xs[xs.length-1].followers:null;
   const months=[...Array(6)].map((_,i)=>mAdd(ym,i-5));const fins=months.map(monthFin);
@@ -330,7 +335,7 @@ function mfImport(){sheet(`${shHead(T('粘贴 / CSV 导入'),T('从 myfans 后�
     catch(e){return}close();toast(T('已导入 ')+n+T(' 行'));render()}})}
 // ---------- 更多 ----------
 function moreView(){const ym=today().slice(0,7);const expM=S.expenses.filter(e=>(e.day||'').startsWith(ym)).reduce((a,e)=>a+num(e.amount),0);
-  return`<div class="pagehd">${S.theme==='mist'?`<span class="cap">〈 その他 〉</span><h2 class="script">Atelier</h2>`:`<h2 class="bl">Atelier</h2>${deco('orn')}`}<p class="sp">${esc(S.user.email)}</p></div>
+  return`<div class="pagehd">${S.theme!=='noir'?`<span class="cap">〈 その他 〉</span><h2 class="script">Atelier</h2>`:`<h2 class="bl">Atelier</h2>${deco('orn')}`}<p class="sp">${esc(S.user.email)}</p></div>
   <section class="card"><div class="ch"><h4 class="ct">${T('选题灵感')}</h4><button class="btn sm" id="iadd">${ic('plus')}${T('记一个')}</button></div>
    ${S.ideas.slice().sort((a,b)=>b.score-a.score).map(i=>`<button class="lrow" data-idea="${i.id}"><i class="pill soft">${'♥'.repeat(i.score||0)}</i><b>${esc(i.title)}</b><small>${esc(i.theme||'')} · ${esc(T(i.status||'待定'))}</small></button>`).join('')||`<p class="empty sm">${T('灵感随手记在这里，之后一键转成投稿')}</p>`}</section>
   <section class="card"><div class="ch"><h4 class="ct">${T('合作对象')}</h4><button class="btn sm" id="cadd">${ic('plus')}${T('添加')}</button></div>

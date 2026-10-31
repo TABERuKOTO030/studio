@@ -157,3 +157,59 @@ code{font-size:11px;background:var(--card2);padding:1px 5px;border-radius:5px;wo
 .t-mist .fab{background:#3A3A3E}.t-mist .btn.ghost{background:#E6ECF2;color:#4F5A66}
 .t-mist .chip{background:color-mix(in srgb,var(--c) 35%,#fff)}
 .t-mist .lockbox .pad button{background:#fff}
+/* ======== 果汁夏日 soda ======== */
+@font-face{font-family:"VPop";src:url(fonts/fredoka.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:"VThin";src:url(fonts/quick.woff2) format("woff2");font-weight:300 700;font-display:swap}
+.t-soda{--bg:#EAF8F6;--card:#FFFFFF;--card2:#F1FAF8;--ink:#24484C;--muted:#5F8588;--faint:#9DB9BA;--accent:#46C2BF;--on-accent:#fff;--chip:#FFF1B8;--chip-ink:#6B5414;--neg:#C2566F;--line:#DDF1EE;
+ --shadow:0 2px 0 #D6EFEB,0 10px 22px rgba(70,170,165,.12);--r:14px;--disp:"VPop",sans-serif;--l0:#46C2BF;--l1:#F4A9BC;
+ --pagebg:linear-gradient(#fff0 0 0),linear-gradient(rgba(70,194,191,.13) 1px,transparent 1px) 0 0/26px 26px,linear-gradient(90deg,rgba(70,194,191,.13) 1px,transparent 1px) 0 0/26px 26px,#F6FCFB;color-scheme:light}
+.t-soda body{font-family:"VPop","Noto Sans CJK SC","Hiragino Maru Gothic ProN","PingFang SC",sans-serif;font-weight:400}
+.sw-soda{background:conic-gradient(#7FD3CF 0 25%,#FFE07A 0 50%,#7FD3CF 0 75%,#FFE07A 0) 0 0/11px 11px;box-shadow:inset 0 0 0 3px #fff,0 0 0 1px #CDEBE7}
+.b-soda{padding-top:4px}.dk-flags{display:block;width:240px;height:34px;margin:0 auto}
+.b-soda .wm{font-size:72px;font-weight:700;color:#46C2BF;letter-spacing:.02em;text-shadow:3px 3px 0 #FFE07A}
+.b-soda .bt span{background:#FFB8C9;color:#5A2A37;padding:3px 10px 3px 16px;border-radius:4px}.b-soda .bt{letter-spacing:.4em;margin-top:6px}
+.b-soda .cap{display:inline-block;background:#24484C;color:#FFF6CF;padding:2px 12px;border-radius:3px;font-size:10px;letter-spacing:.25em}
+.dk-palm{position:absolute;width:64px;height:64px;color:#BFE8E4;right:6px;top:52px;z-index:-1}
+.t-soda .pagehd{position:relative}.t-soda .pagehd .script{font-family:"VPop",sans-serif;font-weight:700;font-size:46px;color:#46C2BF;text-shadow:3px 3px 0 #FFE07A;letter-spacing:.02em}
+.t-soda .pagehd .cap{display:inline-block;background:#FFB8C9;color:#5A2A37;letter-spacing:.25em;padding:2px 10px 2px 14px;border-radius:3px;margin-bottom:6px;clip-path:polygon(8px 0,100% 0,100% 100%,8px 100%,0 50%)}
+.t-soda .pagehd .sp{color:#5F8588}
+.t-soda .tabs{background:#24484C}.t-soda .tabs button{color:#A8CFCF}.t-soda .tabs button.on{background:#FFE07A;color:#24484C}
+.t-soda .seg{background:#DDF3F0}.t-soda .seg button.on{background:#fff;color:#24484C}
+.t-soda .fab{background:#FFB8C9;color:#5A2A37}.t-soda .btn:not(.ghost){box-shadow:0 3px 0 #2FA3A0}
+.t-soda .calt{font-family:"VPop",sans-serif;font-weight:600;color:#24484C;letter-spacing:.06em}
+.t-soda .cell{background:#fff}.t-soda .cell.today b{background:#46C2BF;color:#fff}
+.t-soda .daypanel,.t-soda .sh{-webkit-mask:radial-gradient(circle 5px at 7px 0,#0000 97%,#000) -7px 0/14px 100% repeat-x;mask:radial-gradient(circle 5px at 7px 0,#0000 97%,#000) -7px 0/14px 100% repeat-x}
+.t-soda .daypanel{padding-top:20px;background:linear-gradient(#FFF6CF 0 10px,#fff 10px)}
+.t-soda .sh{background:linear-gradient(#FFF6CF 0 12px,#fff 12px)}
+.t-soda .card .ct::before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;background:#FFB8C9;border-radius:2px;transform:rotate(45deg);vertical-align:1px}
+.t-soda .card.kpis{background:conic-gradient(#F3FBFA 0 25%,#fff 0 50%,#F3FBFA 0 75%,#fff 0) 0 0/18px 18px}
+.t-soda .chip{background:color-mix(in srgb,var(--c) 30%,#fff);color:#24484C}
+.t-soda .st-3{background:#46C2BF;color:#fff}.t-soda .st-2{background:#FFF1B8;color:#6B5414}.t-soda .st-1{background:#FFE2EA;color:#7A3A4C}
+.t-soda .pcard .cov{background:repeating-linear-gradient(45deg,#E2F6F3 0 8px,#FFF6CF 8px 16px)}
+.t-soda .lockbox .pad button{background:#fff}
+/* ======== 棉云日记 diary ======== */
+.t-diary{--bg:#F3F4F6;--card:rgba(255,255,255,.92);--card2:#F2F4F7;--ink:#4E5660;--muted:#757E89;--faint:#A3AAB3;--accent:#8DB8E2;--on-accent:#fff;--chip:#E6F0FA;--chip-ink:#4F6E8C;--neg:#B86A7E;--line:#EBEEF2;
+ --shadow:0 1px 2px rgba(80,90,110,.05),0 12px 28px rgba(110,125,150,.10);--r:18px;--disp:"VThin",sans-serif;--l0:#8DB8E2;--l1:#C9CED6;
+ --pagebg:radial-gradient(#DADEE4 1px,transparent 1.3px) 0 0/16px 16px,#F5F6F8;color-scheme:light}
+.t-diary body{font-family:"VThin","Noto Sans CJK SC","PingFang SC","Hiragino Sans",sans-serif;font-weight:500}
+.sw-diary{background:radial-gradient(#8DB8E2 1.2px,transparent 1.6px) 0 0/5px 5px,#fff;box-shadow:0 0 0 1px #DDE2E8}
+.b-diary{padding-top:44px}.b-diary .wm{font-family:"VThin",sans-serif;font-weight:300;font-size:80px;color:#6B727B;letter-spacing:.04em}
+.b-diary .cap{color:#A9C6E3;letter-spacing:.45em;font-size:10.5px;margin-top:2px}.b-diary .bt{color:#6B727B;letter-spacing:.5em;margin-top:6px}
+.dk-charm{position:absolute;left:calc(50% + 70px);top:0;width:30px;height:54px;filter:drop-shadow(0 2px 3px rgba(110,125,150,.35))}
+.dk-tape{display:block;width:96px;height:20px;background:repeating-linear-gradient(90deg,rgba(141,184,226,.35) 0 6px,rgba(141,184,226,.22) 6px 12px);transform:rotate(-6deg);margin:0 auto}
+.b-diary .t1{position:absolute;left:calc(50% - 130px);top:30px}
+.t-diary .pagehd{position:relative}.t-diary .pagehd .script{font-family:"VThin",sans-serif;font-weight:300;font-size:50px;color:#6B727B;letter-spacing:.06em}
+.t-diary .pagehd .cap{color:#8DB8E2;letter-spacing:.4em}.t-diary .pagehd .dk-tape{position:absolute;right:18px;top:4px;width:70px;transform:rotate(8deg)}
+.t-diary .tabs{background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}.t-diary .tabs button.on{background:#E6F0FA;color:#4F6E8C}
+.t-diary .fab{background:#8DB8E2}.t-diary .btn:not(.ghost){background:#8DB8E2}
+.t-diary .calt{font-family:"VThin",sans-serif;font-weight:400;letter-spacing:.25em;color:#5E6670}
+.t-diary .cell{background:rgba(255,255,255,.85)}.t-diary .cell.today b{background:#8DB8E2;color:#fff}
+.t-diary .daypanel{padding-left:34px;background:radial-gradient(circle 5px at 16px 50%,#E9ECF0 92%,#0000) 0 0/32px 34px repeat-y,rgba(255,255,255,.95)}
+.t-diary .sh{background:radial-gradient(#E9EDF2 1px,transparent 1.3px) 0 0/12px 12px,#fff}
+.t-diary #main,.t-diary .sh{counter-reset:sec}
+.t-diary .card .ct::before{counter-increment:sec;content:counter(sec);display:inline-grid;place-items:center;width:18px;height:18px;margin-right:8px;border-radius:50%;background:#E6F0FA;color:#5E86AE;font-size:10.5px;vertical-align:1px}
+.t-diary .card.kpis::after{content:"";position:absolute;right:14px;top:-7px;width:58px;height:16px;background:repeating-linear-gradient(90deg,rgba(141,184,226,.35) 0 6px,rgba(141,184,226,.2) 6px 12px);transform:rotate(4deg)}
+.t-diary .chip{background:color-mix(in srgb,var(--c) 28%,#fff);color:#4E5660}
+.t-diary .st-3{background:#8DB8E2;color:#fff}.t-diary .st-2{background:#E6F0FA;color:#4F6E8C}.t-diary .st-1{background:#F1EEF1;color:#7C6670}
+.t-diary .pcard .cov{background:radial-gradient(#DDE3EA 1px,transparent 1.3px) 0 0/8px 8px,#F6F8FA;border-radius:14px}
+.t-diary .lockbox .pad button{background:#fff}
